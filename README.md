@@ -20,8 +20,7 @@ let AspectImage = require('react-native-aspect-image');
   sources={{ uri: 'https://example.com/icon@3x.png' }} />
 ```
 
-## Demo
-
+![Demo](https://raw.githubusercontent.com/guobinnew/react-native-aspect-image/master/demo.png)
 
 ## Implementation
 
