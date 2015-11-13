@@ -15,16 +15,21 @@ var AspectImage = React.createClass({
 
     onImageLoad: function (e) {
         var size = e.nativeEvent.size;
-        console.log('nativeEvent==' + size.width + ':' + size.height);
         var aspectRatio = size.width / size.height;
+        var width = this.state.layoutWidth;
         var measuredHeight = width / aspectRatio;
-        console.log('width==' + width);
-        console.log('measuredHeight==' + measuredHeight);
         this.setState({
             style: {
                 width: width,
                 height: measuredHeight
             }
+        });
+    },
+
+    onImageLayout:function(e){
+        var layout = e.nativeEvent.layout;
+        this.setState({
+            layoutWidth: layout.width
         });
     },
 
@@ -34,6 +39,7 @@ var AspectImage = React.createClass({
                 {...this.props}
                 style={[this.props.style, this.state.style]}
                 onLoad={this.onImageLoad}
+                onLayout={this.onImageLayout}
                 />
         );
     }
