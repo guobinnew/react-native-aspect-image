@@ -26,8 +26,3 @@ var styles = StyleSheet.create({
 ```
 Each picture has a different height. AspectImage can adjust the image height according to width.
 ![Demo](https://raw.githubusercontent.com/guobinnew/react-native-aspect-image/master/demo.png)
-
-
-## References
-
-http://stackoverflow.com/questions/31654244/react-native-retrieve-actual-image-sizes
