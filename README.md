@@ -1,0 +1,1 @@
+# react-native-aspect-image
