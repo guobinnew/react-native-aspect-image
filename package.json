@@ -1,0 +1,25 @@
+{
+  "name": "react-native-aspect-image",
+  "version": "0.0.1",
+  "description": "A responsive Image component that adjust height by width",
+  "main": "AspectImage.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guobinnew/react-native-aspect-image.git"
+  },
+  "keywords": [
+    "react-native",
+    "responsive",
+    "image",
+    "aspect ratio"
+  ],
+  "author": "Unique <ods_hla@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guobinnew/react-native-aspect-image/issues"
+  },
+  "homepage": "https://github.com/guobinnew/react-native-aspect-image#readme"
+}
