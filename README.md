@@ -1,28 +1,28 @@
 # AspectImage
-A responsive Image component that adjust height by width
+A responsive Image component that adjust height by real width, and keeping aspect ratio unchanged.
 
 ## Installation
 
-```
-npm install react-native-aspect-image --save
-```
-
-Require it with:
-
-```js
-let AspectImage = require('react-native-aspect-image');
-```
+1.  overwrite react-native DIR of your project( need to modify RCTImageView.m in L199~L204 )
+2.  add AspectImage.js into your project
 
 ## Usage
 
-AspectImage accepts the same props as Image plus a new prop called `sources`. The `sources` prop is an object whose keys are pixel ratios (that is, screen scales like "2" or "3"). Its values are Image sources to display on screens with the respective pixel ratio. This is how you use it:
-
 ```js
+var AspectImage = require('./AspectImage');
+
 <AspectImage
-  sources={{ uri: 'https://example.com/icon@3x.png' }} />
+  sources={{ uri: 'xxxx' }}  style={styles.img}/>
+<AspectImage
+  sources={{ uri: 'xxxx' }}  style={styles.img}/>
+  
+var {width, height} = Dimensions.get('window');
+var styles = StyleSheet.create({
+      img:{
+         flex:1,
+         width: width;
+      }
+  });
 ```
-
-## Implementation
-
-AspectImage chooses the image source for the closest pixel ratio that is greater than or equal to screen's pixel ratio.
-
+Each picture has a different height. AspectImage can adjust the image height according to width.
+![Demo](https://raw.githubusercontent.com/guobinnew/react-native-aspect-image/master/demo.png)
